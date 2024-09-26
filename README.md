@@ -4,7 +4,7 @@ This repository demonstrates the use of precompiled binaries for an Unreal Engin
 
 ## Compatibility
 
-- The plugin has been compiled using **Unreal Engine 5.3**.
+- The precompiled version of the plugin has been compiled using **Unreal Engine 5.3**.
 - The precompiled binaries are compatible with any Unreal Engine 5.3 projects on **Windows 64-bit** and **Linux** platforms.
 
 ## Repository Structure
@@ -26,7 +26,7 @@ The repository contains the following folders:
 - A template Unreal Engine project that includes the `PrebuiltBinaries` plugin with full source code.
 - The project contains a default map with an actor that reads and displays an `FString` from a function within the `BinaryShareObject.cpp` class.
 - The `Source` directory has been included with the necessary barebones Unreal Engine source files.
-- The project file (`XR_Template.uproject`) has been configured to include the `BinaryTest` module, enabling the generation of a solution file (`.sln`) so that the plugin can be built within the Unreal Editor.
+- The project file (`XR_Template.uproject`) has been configured to include the `BinaryTest` module, enabling the generation of a solution file (`.sln`) or a workspace file (`.code-workspace`) so that the plugin can be built within the Unreal Editor.
 
 ### 4. `Unreal_Template_Project_CompiledPlugin`
 - A template Unreal Engine project that includes the `PrebuiltBinariesCompiled` plugin, which contains only the precompiled binaries.
@@ -50,7 +50,7 @@ The repository contains the following folders:
 1. **`Unreal_Template_Project`**:
    - Open this project if you want to test the plugin with full source code included.
    - The project contains a default map with an actor that reads and displays an `FString` from a function in `BinaryShareObject.cpp`.
-   - The `BinaryTest` module is included in the `.uproject` file, allowing the generation of a solution file so that the plugin can be built within the Unreal Editor.
+   - The `BinaryTest` module is included in the `.uproject` file, allowing the generation of a solution file (`.sln`) or a workspace file (`.code-workspace`) so that the plugin can be built within the Unreal Editor.
 
 2. **`Unreal_Template_Project_CompiledPlugin`**:
    - Open this project to test with the precompiled version of the plugin.
