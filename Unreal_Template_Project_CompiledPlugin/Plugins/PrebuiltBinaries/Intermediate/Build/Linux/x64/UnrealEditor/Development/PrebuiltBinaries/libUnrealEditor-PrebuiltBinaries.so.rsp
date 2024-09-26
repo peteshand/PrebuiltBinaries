@@ -1,0 +1,6 @@
+"/mnt/i/p4/0000_PrebuiltBinaries/BinaryTest/Plugins/PrebuiltBinaries/Intermediate/Build/Linux/x64/UnrealEditor/Development/PrebuiltBinaries/Module.PrebuiltBinaries.cpp.o"
+ -soname="libUnrealEditor-PrebuiltBinaries.so"
+ -rpath-link="/mnt/i/p4/0000_PrebuiltBinaries/BinaryTest/Plugins/PrebuiltBinaries/Binaries/Linux"
+ -L"/mnt/d/UnrealEngines/Linux/Linux_Unreal_Engine_5.3.2/Engine/Binaries/Linux"
+ --start-group
+ --end-group
