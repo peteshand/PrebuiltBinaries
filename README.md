@@ -1,6 +1,6 @@
-# Immersive Stream XR Precompiled Binary Example Plugin
+# Unreal Engine Precompiled Binary Example Plugin
 
-This repository demonstrates the use of precompiled binaries for an Unreal Engine plugin in an Immersive Stream XR (ISXR) project. The example includes both the original plugin source and the precompiled version, along with two template projects to help troubleshoot build issues when using precompiled binaries with Immersive Stream XR.
+This repository demonstrates the use of precompiled binaries for an Unreal Engine plugin. The example includes both the original plugin source and the precompiled version, along with two template projects to help troubleshoot and test the integration of precompiled plugin binaries in Unreal Engine.
 
 ## Compatibility
 
@@ -23,17 +23,15 @@ The repository contains the following folders:
 - **Note**: These binaries are compatible with Unreal Engine 5.3 projects on both Windows 64-bit and Linux.
 
 ### 3. `Unreal_Template_Project`
-- A template Immersive Stream XR project that includes the `PrebuiltBinaries` plugin with full source code.
-- Includes the standard **Immersive Stream XR template content** and a new **default map**.
-- The default map contains an actor that reads and displays an `FString` from a function within the `BinaryShareObject.cpp` class.
+- A template Unreal Engine project that includes the `PrebuiltBinaries` plugin with full source code.
+- The project contains a default map with an actor that reads and displays an `FString` from a function within the `BinaryShareObject.cpp` class.
 - The `Source` directory has been included with the necessary barebones Unreal Engine source files.
-- The `XR_Template.uproject` has been configured to include the `BinaryTest` module, enabling the generation of a solution file (`.sln`) so that the plugin can be built within the Unreal Editor.
+- The project file (`XR_Template.uproject`) has been configured to include the `BinaryTest` module, enabling the generation of a solution file (`.sln`) so that the plugin can be built within the Unreal Editor.
 
 ### 4. `Unreal_Template_Project_CompiledPlugin`
-- A template Immersive Stream XR project that includes the `PrebuiltBinariesCompiled` plugin, which contains only the precompiled binaries.
-- Includes the standard **Immersive Stream XR template content** and a new **default map**.
-- The default map contains an actor that reads and displays an `FString` from a function within the `BinaryShareObject.cpp` class.
-- The `.cpp` source code is not included in this version, allowing you to test how the precompiled plugin integrates with an ISXR project.
+- A template Unreal Engine project that includes the `PrebuiltBinariesCompiled` plugin, which contains only the precompiled binaries.
+- The project contains a default map with an actor that reads and displays an `FString` from a function within the `BinaryShareObject.cpp` class.
+- The `.cpp` source code is not included in this version, allowing you to test how the precompiled plugin integrates with an Unreal Engine project.
 
 ## How to Use
 
@@ -51,18 +49,23 @@ The repository contains the following folders:
 ### Using the Template Projects:
 1. **`Unreal_Template_Project`**:
    - Open this project if you want to test the plugin with full source code included.
-   - The project includes the standard Immersive Stream XR template content.
-   - The default map contains an actor that reads and displays an `FString` from a function in `BinaryShareObject.cpp`.
-   - The `BinaryTest` module is included in the `XR_Template.uproject` file, allowing the generation of a solution file so that the plugin can be built within the Unreal Editor.
+   - The project contains a default map with an actor that reads and displays an `FString` from a function in `BinaryShareObject.cpp`.
+   - The `BinaryTest` module is included in the `.uproject` file, allowing the generation of a solution file so that the plugin can be built within the Unreal Editor.
 
 2. **`Unreal_Template_Project_CompiledPlugin`**:
    - Open this project to test with the precompiled version of the plugin.
-   - This version includes the standard Immersive Stream XR template content, along with a default map that contains an actor displaying an `FString` from `BinaryShareObject.cpp`.
-   - This version is ideal for testing the precompiled plugin in an ISXR environment without access to the source code.
+   - This version contains a default map that includes an actor displaying an `FString` from `BinaryShareObject.cpp`.
+   - This version is ideal for testing the precompiled plugin in an Unreal Engine environment without access to the source code.
 
 ## Notes
 
-- This example demonstrates how to structure and configure a plugin to work with precompiled binaries in an Immersive Stream XR project.
-- The modifications made to the `.uplugin` and `.build.cs` files in `PrebuiltBinariesCompiled` ensure that the Unreal Engine correctly identifies and uses the precompiled binaries.
+- This example demonstrates how to structure and configure a plugin to work with precompiled binaries in an Unreal Engine project.
+- The modifications made to the `.uplugin` and `.build.cs` files in `PrebuiltBinariesCompiled` ensure that Unreal Engine correctly identifies and uses the precompiled binaries.
 
-If you encounter any issues or have questions, feel free to reach out.
+## References
+
+For more information about packaging precompiled binaries for Unreal Engine plugins, you may find the following resources helpful:
+
+- [Unreal Engine Forum: Package Plugin Binary Header Missing Precompiled Manifest](https://forums.unrealengine.com/t/package-plugin-binary-header-missing-precompiled-manifest/452817)
+- [AlgoSyntax: How to Package and Sell Binary Plugins for UE5](https://store.algosyntax.com/tutorials/unreal-engine/how-to-package-and-sell-binary-plugins-for-ue5/?srsltid=AfmBOopKBOGsYOpn5RQqTwyqqOWyrhMTg03zpeSvZ6Q2yt7mz8sLvrRj)
+- [Mercuna: Building Binary Plugins in Unreal Engine 4](https://mercuna.com/building-binary-plugins-in-unreal-engine-4/)
